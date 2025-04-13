@@ -1,0 +1,63 @@
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Virtual environment
+env/
+venv/
+ENV/
+env.bak/
+.venv/
+
+# VSCode config
+.vscode/
+
+# Pytest cache
+.pytest_cache/
+
+# MyPy
+.mypy_cache/
+
+# Logs
+*.log
+
+# macOS system files
+.DS_Store
+
+# Python egg info
+*.egg-info/
+
+# Environment variables
+.env
+
+# Coverage reports
+htmlcov/
+.coverage
+.coverage.*
+
+# Build artifacts
+build/
+dist/
+*.egg
+
+# Database or local dev data
+*.db
+*.sqlite3
+
+# IDEs
+.idea/
+*.sublime-project
+*.sublime-workspace
+
+# Postman files (if generated temporarily)
+*.postman_collection.json
+
+# Uvicorn reload cache
+__pypackages__/
+
+# VSCode Python extension debugging
+.vscode/
+
+# Docker
+*.pid

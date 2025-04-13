@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Panel - BeeTrail</title>
+    <link rel="stylesheet" href="/static/style.css">
+    <script src="/static/admin.js"></script>
+</head>
+<body>
+    <h1>Admin Panel</h1>
+    <p>Welcome, Admin! Here you can manage crop calendars.</p>
+
+    <h2>Add Crop Calendar Entry</h2>
+    <form id="addCropForm">
+        <label for="cropName">Crop Name:</label>
+        <input type="text" id="cropName" name="cropName" required>
+
+        <label for="floweringStart">Flowering Start Date:</label>
+        <input type="date" id="floweringStart" name="floweringStart" required>
+
+        <label for="floweringEnd">Flowering End Date:</label>
+        <input type="date" id="floweringEnd" name="floweringEnd" required>
+
+        <label for="cropLatitude">Latitude:</label>
+        <input type="number" id="cropLatitude" step="0.0001" name="cropLatitude" required>
+
+        <label for="cropLongitude">Longitude:</label>
+        <input type="number" id="cropLongitude" step="0.0001" name="cropLongitude" required>
+
+        <label for="recommendedHiveDensity">Recommended Hive Density:</label>
+        <input type="number" id="recommendedHiveDensity" min="1" name="recommendedHiveDensity" required>
+
+        <button type="submit">Add Crop</button>
+    </form>
+
+    <h2>Get Hive Logs</h2>
+    <form id="getHivesForm">
+        <label for="startDate">Start Date (Optional):</label>
+        <input type="date" id="startDate">
+
+        <label for="endDate">End Date (Optional):</label>
+        <input type="date" id="endDate">
+
+        <button type="button" onclick="fetchHiveLogs()">Get Hive Logs</button>
+    </form>
+    <div id="hiveLogsContainer"></div>
+
+    <h2>Export Hive Logs</h2>
+    <form id="exportHivesForm">
+        <label for="exportStartDate">Start Date (Optional):</label>
+        <input type="date" id="exportStartDate">
+
+        <label for="exportEndDate">End Date (Optional):</label>
+        <input type="date" id="exportEndDate">
+
+        <button type="button" onclick="exportHivesCSV()">Export as CSV</button>
+    </form>
+
+    <h2>Find Nearby Crop Opportunities</h2>
+    <form id="nearbyCropsForm">
+        <label for="currentLatitude">Your Latitude:</label>
+        <input type="number" id="currentLatitude" step="0.0001" required>
+
+        <label for="currentLongitude">Your Longitude:</label>
+        <input type="number" id="currentLongitude" step="0.0001" required>
+
+        <label for="radius">Radius (km, Optional):</label>
+        <input type="number" id="radius" value="100">
+
+        <label for="searchDate">Date (Optional):</label>
+        <input type="date" id="searchDate">
+
+        <button type="button" onclick="fetchNearbyCrops()">Find Crops</button>
+    </form>
+    <div id="nearbyCropsContainer"></div>
+
+    <h2>Add Hive Log</h2>
+    <form id="addHiveForm">
+        <label for="hiveId">Hive ID:</label>
+        <input type="text" id="hiveId" required>
+
+        <label for="datePlaced">Date Placed:</label>
+        <input type="date" id="datePlaced" required>
+
+        <label for="latitude">Latitude:</label>
+        <input type="number" id="latitude" step="0.0001" required>
+
+        <label for="longitude">Longitude:</label>
+        <input type="number" id="longitude" step="0.0001" required>
+
+        <label for="numColonies">Number of Colonies:</label>
+        <input type="number" id="numColonies" min="1" required>
+
+        <button type="submit">Add Hive</button>
+    </form>
+
+</body>
+</html>
