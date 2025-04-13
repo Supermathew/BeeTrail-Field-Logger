@@ -1,0 +1,220 @@
+{
+    "v": 6,
+    "name": "Sde-assignment",
+    "folders": [],
+    "requests": [
+      {
+        "v": "11",
+        "name": "Register",
+        "method": "POST",
+        "endpoint": "http://127.0.0.1:8000/api/register",
+        "params": [],
+        "headers": [],
+        "preRequestScript": "",
+        "testScript": "",
+        "auth": {
+          "authType": "inherit",
+          "authActive": true
+        },
+        "body": {
+          "contentType": "application/json",
+          "body": "{\n  \"email\": \"domathew@gmail.com\",\n  \"role\": \"admin\",\n  \"password\": \"admin123\"\n}"
+        },
+        "requestVariables": [],
+        "responses": {}
+      },
+      {
+        "v": "11",
+        "name": "Login",
+        "method": "POST",
+        "endpoint": "http://127.0.0.1:8000/api/login",
+        "params": [],
+        "headers": [],
+        "preRequestScript": "",
+        "testScript": "",
+        "auth": {
+          "authType": "inherit",
+          "authActive": true
+        },
+        "body": {
+          "contentType": "application/json",
+          "body": "{\n  \"username\": \"domathew@gmail.com\",\n  \"password\": \"admin123\"\n}"
+        },
+        "requestVariables": [],
+        "responses": {}
+      },
+      {
+        "v": "11",
+        "name": "Create Hive Log",
+        "method": "POST",
+        "endpoint": "http://127.0.0.1:8000/api/hives",
+        "params": [],
+        "headers": [],
+        "preRequestScript": "",
+        "testScript": "",
+        "auth": {
+          "authType": "bearer",
+          "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJkb2xpa2VtYXRoZXdAZ21haWwuY29tIiwicm9sZSI6ImFkbWluIiwiZXhwIjoxNzQ0NTUxMTc0fQ.ShSQiHrEYLqsskmR20EfZxXC56PMFP6NyFDYP3LiQ_U",
+          "authActive": true
+        },
+        "body": {
+          "contentType": "application/json",
+          "body": "{\n  \"hiveId\": \"HIVE10\",\n  \"datePlaced\": \"2025-04-13\",\n  \"latitude\": -90,\n  \"longitude\": -180,\n  \"numColonies\": 10\n}"
+        },
+        "requestVariables": [],
+        "responses": {}
+      },
+      {
+        "v": "11",
+        "name": "GET-HIVE-LOG",
+        "method": "GET",
+        "endpoint": "http://127.0.0.1:8000/api/hives?start_date=2025-01-01&end_date=2025-12-31",
+        "params": [],
+        "headers": [],
+        "preRequestScript": "",
+        "testScript": "",
+        "auth": {
+          "authType": "bearer",
+          "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJkb2xpa2VtYXRoZXdAZ21haWwuY29tIiwicm9sZSI6ImFkbWluIiwiZXhwIjoxNzQ0NTU1MDg5fQ.jzXgTARUyRjEKRPrIKz3p_9sxJOvCSc-MskRFywnQh8",
+          "authActive": true
+        },
+        "body": {
+          "contentType": "application/json",
+          "body": ""
+        },
+        "requestVariables": [],
+        "responses": {}
+      },
+      {
+        "v": "11",
+        "name": "Export Hive log",
+        "method": "GET",
+        "endpoint": "http://127.0.0.1:8000/api/hives/export?start_date=2025-04-25&end_date=2025-12-31",
+        "params": [],
+        "headers": [],
+        "preRequestScript": "",
+        "testScript": "",
+        "auth": {
+          "authType": "bearer",
+          "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJkb2xpa2VtYXRoZXdAZ21haWwuY29tIiwicm9sZSI6ImFkbWluIiwiZXhwIjoxNzQ0NTUxMTc0fQ.ShSQiHrEYLqsskmR20EfZxXC56PMFP6NyFDYP3LiQ_U",
+          "authActive": true
+        },
+        "body": {
+          "contentType": null,
+          "body": null
+        },
+        "requestVariables": [],
+        "responses": {}
+      },
+      {
+        "v": "11",
+        "name": "Create Crop Log",
+        "method": "POST",
+        "endpoint": "http://127.0.0.1:8000/api/crops",
+        "params": [],
+        "headers": [],
+        "preRequestScript": "",
+        "testScript": "",
+        "auth": {
+          "authType": "bearer",
+          "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJkb2xpa2VtYXRoZXdAZ21haWwuY29tIiwicm9sZSI6ImFkbWluIiwiZXhwIjoxNzQ0NTUxMTc0fQ.ShSQiHrEYLqsskmR20EfZxXC56PMFP6NyFDYP3LiQ_U",
+          "authActive": true
+        },
+        "body": {
+          "contentType": "application/json",
+          "body": "{\n  \"name\": \"RICEBAS\",\n  \"floweringStart\": \"2025-04-13\",\n  \"floweringEnd\": \"2025-04-15\",\n  \"latitude\": -90,\n  \"longitude\": -180,\n  \"recommendedHiveDensity\": 5\n}"
+        },
+        "requestVariables": [],
+        "responses": {}
+      },
+      {
+        "v": "11",
+        "name": "Get Nearby Crop",
+        "method": "GET",
+        "endpoint": "http://127.0.0.1:8000/api/crops/nearby?latitude=37.7&longitude=-122.41&radius=10000&date=2025-04-13",
+        "params": [],
+        "headers": [],
+        "preRequestScript": "",
+        "testScript": "",
+        "auth": {
+          "authType": "bearer",
+          "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJkb2xpa2VtYXRoZXdAZ21haWwuY29tIiwicm9sZSI6ImFkbWluIiwiZXhwIjoxNzQ0NTUxMTc0fQ.ShSQiHrEYLqsskmR20EfZxXC56PMFP6NyFDYP3LiQ_U",
+          "authActive": true
+        },
+        "body": {
+          "contentType": "application/json",
+          "body": ""
+        },
+        "requestVariables": [],
+        "responses": {}
+      },
+      {
+        "v": "11",
+        "name": "Sync Token",
+        "method": "GET",
+        "endpoint": "http://127.0.0.1:8000/api/sync",
+        "params": [],
+        "headers": [],
+        "preRequestScript": "",
+        "testScript": "",
+        "auth": {
+          "authType": "bearer",
+          "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJkb2xpa2VtYXRoZXdAZ21haWwuY29tIiwicm9sZSI6ImFkbWluIiwiZXhwIjoxNzQ0NTU1MDg5fQ.jzXgTARUyRjEKRPrIKz3p_9sxJOvCSc-MskRFywnQh8",
+          "authActive": true
+        },
+        "body": {
+          "contentType": null,
+          "body": null
+        },
+        "requestVariables": [],
+        "responses": {}
+      },
+      {
+        "v": "11",
+        "name": "Sync Hives",
+        "method": "POST",
+        "endpoint": "http://127.0.0.1:8000/api/sync/hives",
+        "params": [],
+        "headers": [],
+        "preRequestScript": "",
+        "testScript": "",
+        "auth": {
+          "authType": "bearer",
+          "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJkb2xpa2VtYXRoZXdAZ21haWwuY29tIiwicm9sZSI6ImFkbWluIiwiZXhwIjoxNzQ0NTU1MDg5fQ.jzXgTARUyRjEKRPrIKz3p_9sxJOvCSc-MskRFywnQh8",
+          "authActive": true
+        },
+        "body": {
+          "contentType": "application/json",
+          "body": "{\n  \"syncToken\": 1744531327.531202,\n  \"changes\": [\n    {\n      \"hiveId\": \"HIVE_100231\",\n      \"datePlaced\": \"2025-04-13\",\n      \"latitude\": -90,\n      \"longitude\": -180,\n      \"numColonies\": 0,\n      \"localTimestamp\": \"2025-04-13T12:00:00\"\n    }\n  ]\n}\n"
+        },
+        "requestVariables": [],
+        "responses": {}
+      },
+      {
+        "v": "11",
+        "name": "Refresh Token",
+        "method": "POST",
+        "endpoint": "http://127.0.0.1:8000/api/token/refresh",
+        "params": [],
+        "headers": [],
+        "preRequestScript": "",
+        "testScript": "",
+        "auth": {
+          "authType": "inherit",
+          "authActive": true
+        },
+        "body": {
+          "contentType": "application/json",
+          "body": "{\n  \"refresh_token\": \"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJkb2xpa2VtYXRoZXdAZ21haWwuY29tIiwicm9sZSI6ImFkbWluIiwiZXhwIjoxNzQ1MTU4MDg5fQ.NypAHBMmO7M_3H0ml7H571sv61ZSs6YfHVHMRyYCY_s\"\n}\n"
+        },
+        "requestVariables": [],
+        "responses": {}
+      }
+    ],
+    "auth": {
+      "authType": "none",
+      "authActive": true
+    },
+    "headers": [],
+    "_ref_id": "coll_m9fnd9j6_4d435b38-295b-4c9d-a1e9-c8f321946866"
+  }
