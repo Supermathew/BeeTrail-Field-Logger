@@ -77,7 +77,7 @@ A FastAPI-based backend for managing beekeeping field logs with user authenticat
 ### 5. **GET `/admin`**
 - Basic dashboard for admin access.
 - Requires valid JWT token with role `admin`.
-- Could serve as the entry point to a dashboard interface (e.g., React frontend).
+- Could serve as the entry point to a dashboard interface.
 
 ---
 
