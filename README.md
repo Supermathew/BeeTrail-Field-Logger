@@ -36,6 +36,7 @@ A FastAPI-based backend for managing beekeeping field logs with user authenticat
 
 6. **API Documentation**  
    Open Swagger UI at: `http://localhost:8000/docs`
+   Only admin user can access and login to api.
 
 ---
 
